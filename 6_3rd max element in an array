@@ -1,0 +1,37 @@
+//Find the 3rd max element in a given array given that array has distinct elements.
+//Input - {1,4,5,7,8,3,2,9};
+//Output - 7
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int thirdMax(int a[],int n)
+{
+	if(n<3){
+		exit(0);
+	}
+	int first=a[0],second=INT_MIN,third=INT_MIN;
+	for(int i=1;i<n;i++){
+	if(a[i]>first){
+		third = second;
+		second = first;
+		first = a[i];
+		}
+		else if(a[i]>second){
+			third = second;
+			second =a[i];
+		}
+		else if(a[i]>third){
+			third = a[i];
+		}
+	}
+	return third;
+}
+int main() {
+	
+	int a[]={1,4,5,7,8,3,2,9};
+	int n = sizeof(a)/sizeof(a[0]);
+	cout<<thirdMax(&a[0],n);
+
+	return 0;
+}
