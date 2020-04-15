@@ -1,0 +1,30 @@
+//Find 2 elements with min sum in an array.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int minSum(int a[],int n){
+	if(n<2){
+		exit(0);
+	}
+	
+	int i,j,first=a[0],second=INT_MAX;
+	
+	for(i=1;i<n;i++){
+		if(a[i]<first){
+			second = first;
+			first = a[i];
+		}
+		else if(a[i]<second){
+			second = a[i];
+		}
+	}
+	return first+second;
+}
+
+int main() {
+	int a[]={1,5,8,4,2,3};
+	int n = sizeof(a)/sizeof(a[0]);
+	cout<<minSum(&a[0],n);
+	return 0;
+}
