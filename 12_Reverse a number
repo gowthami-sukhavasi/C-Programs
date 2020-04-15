@@ -1,0 +1,17 @@
+//Reverse a number
+//Output - 321
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int a = 123,d = 0,r = 0;
+	while(a > 0){
+		r=a%10;
+		a=a/10;
+		d=(d*10)+r;
+	}
+	cout<<d;
+	return 0;
+}
