@@ -1,0 +1,28 @@
+//To find if an element is present in the array. 
+//Input – size of array, array elements, element to find.
+//Input : 	5,  2 4 3 5 7, 4    
+//output: 0 – if not present/1 if present
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	int i,n,k,a[100],flag=0;
+	cin>>n;
+	for(int i=0; i<n; i++){
+		cin>>a[i];
+	}
+	cin>>k;
+ 
+		for(i=0; i<n; i++){
+		if(a[i]==k){
+			cout<<"1";
+			flag = 1;
+			break;
+		}
+	}
+	if(flag == 0)
+	cout<<"0";
+ 
+	return 0;
+}
