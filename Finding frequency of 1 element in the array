@@ -1,0 +1,28 @@
+//Finding frequency of 1 element in the array - by using another count array
+//input: 8 , 1 4 4 1 3 3 3 3, 3
+//output: 4
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	// your code goes here
+ 
+	int n,i,k,a[100],count[101];
+	count [100] = {0};
+ 
+	cin>>n;
+	for(i=0;i<n;i++){
+		cin>>a[i];
+	}
+	cin>>k;
+ 
+	for(i=0;i<=n;i++)
+	{
+		if(a[i]==k){
+			count[a[i]]++;
+		}
+	}
+	cout<<count[k];
+	return 0;
+}
